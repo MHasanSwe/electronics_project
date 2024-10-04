@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart Aquarium Dashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Add this line -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+<body>
+    <div class="container">
+        <h1 align="center">Smart Aquarium </h1>
+        
+        <!-- Flex Container for Sections -->
+        <div class="flex-container">
+            <!-- Section 1: Feeding -->
+            <div class="section" id="feeding">
+                <h2 align="center">Feeding Control</h2>
+                <p>Remaining Feed: <span id="remainingFeed">50g</span></p>
+                <button id="automaticFeed">Automatic Feed</button>
+                <button id="manualFeed">Manual Feed</button>
+            </div>
+
+            <!-- Section 2: Water Parameters -->
+            <div class="section" id="water-parameters">
+                <h2 align="center">Water Parameters</h2>
+                <p>pH: <span id="phValue"></span></p>
+                <p>TDS: <span id="tdsValue">200</span> </p>
+                <p>Temperature: <span id="tempValue">24°C</span></p>
+            </div>
+
+            <!-- Section 3: Light Intensity -->
+                <div class="section" id="light-intensity">
+                <h2 align="center">Light Intensity</h2>
+                 <p>Intensity: <span id="lightValue">250 lx</span></p>
+
+            <!-- Slider for adjusting light intensity -->
+            <input type="range" id="lightSlider" min="0" max="1000" value="250" step="1" oninput="updateLightValue()">
+            <button id="set-light-btn">Set Light</button>
+</div>
+
+        </div>
+
+        <!-- Middle Section: Water Change Dates -->
+        <div class="middle-section">
+            <h2 align="center">Water Change Schedule</h2>
+            <p>Last Water Changed: <span id="lastChange">01-09-2024</span></p>
+            <p>Next Water Change: <span id="nextChange">01-10-2024</span></p>
+        </div>
+
+        <!-- Section 4: Alerts -->
+        <div class="sectionlast" id="alerts">
+            <h2 align="center">Alerts</h2>
+            <p id="alertMessage">No Alerts</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

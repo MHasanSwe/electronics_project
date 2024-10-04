@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa;
+    color: #00796b;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section {
+    flex: 1; /* Allow sections to grow equally */
+    margin-right: 10px; /* Space between sections */
+    padding: 15px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    transition: 4s;
+    color: white; /* Text color for better visibility */
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* To handle child elements */
+}
+
+.section#feeding {
+    background-image: url('images/feeding.webp'); /* Replace with actual image path */
+}
+
+.section#water-parameters {
+    background-image: url('images/water1.jpg'); /* Replace with actual image path */
+}
+
+.section#light-intensity {
+    background-image: url('images/light.jpg'); /* Replace with actual image path */
+}
+
+.section#alerts {
+    background-image: url('images/w_change.webp'); /* Replace with actual image path */
+}
+
+.section#water-parameters {
+    background-color: #81d4fa; /* Light blue color */
+    color: #fcfbfb; /* Darker text color for better contrast */
+    background-image: url('https://img.freepik.com/free-photo/beautiful-photo-sea-waves_58702-11300.jpg?t=st=1727986919~exp=1727990519~hmac=ccfe1c39bb870b307748fddf1734f75ea6f8497bdf5a8defc817f896ddd2701f&w=996'); /* Optional: if you still want a background image */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.middle-section {
+    text-align: center;
+    margin: 20px 200px;
+    padding: 15px;
+    background-image: url('images/w_change.webp'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    transition: 4s;
+    border-radius: 8px;
+    color: white; /* Text color for better visibility */
+    position: relative; /* For overlay positioning */
+}
+
+.middle-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.middle-section h2,
+.middle-section p {
+    position: relative; /* Ensure text appears above overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.middle-section:hover {
+    color: white;
+    background-color: rgba(255, 193, 7, 0.7); /* Adjust overlay on hover */
+}
+
+.sectionlast {
+    flex: 1; /* Allow sections to grow equally */
+    text-align: center;
+    margin: 20px 100px;
+   /* margin-right: 10px; /* Space between sections */
+    padding: 15px;
+    background-image: url('images/alerts-image.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    color: white; /* Text color for better visibility */
+    position: relative; /* For overlay positioning */
+}
+
+.sectionlast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.sectionlast h2,
+.sectionlast p {
+    position: relative; /* Ensure text appears above overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.sectionlast:hover {
+    color: white;
+    background-color: rgba(255, 193, 7, 0.7); /* Adjust overlay on hover */
+}
+
+.section:hover,
+.middle-section:hover,
+.sectionlast:hover {
+    color: white;
+    background-color: rgba(255, 193, 7, 0.7); /* Adjust overlay on hover */
+}
